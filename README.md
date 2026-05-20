@@ -1,3 +1,15 @@
+A portable AI workflow layer that installs into any codebase via symlink. It gives your AI assistant a structured approach to planning, implementing, and reviewing code changes — without baking any project-specific knowledge into the shared core.
+
+Inspired by [Matt Pocock](https://www.mattpocock.com).
+
+Drop it in, point your AI boot file at it, and get:
+- **Grill me** — relentless interrogation to surface assumptions before you write a line of code
+- **Create PRP** — a complete implementation brief built from that shared understanding
+- **Execute PRP** — a disciplined implementation pass in a clean context
+- **Review** — a post-implementation check against the brief before raising a PR
+
+---
+
 ## Install instructions for humans
 
 1. In your code repo:
