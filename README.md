@@ -35,7 +35,7 @@ Both contexts also include **Grill me** and **Validate AI setup**.
 
 ```bash
 mkdir -p _AI/PRPs
-ln -s ~/Dev/code-ai-layer/code/core _AI/core
+ln -s ~/Dev/ai-layer/code/core _AI/core
 ```
 
 > **Symlink vs copy:** The symlink means all your repos share one `core/` — updates propagate instantly. That's ideal for personal use. For shared team repos, copy `code/core/` instead or use a git submodule.
@@ -61,7 +61,7 @@ Create `_AI/VALIDATION.md` — the commands to run at each validation gate:
 
 ```bash
 mkdir -p /path/to/vault/_AI
-ln -s ~/Dev/code-ai-layer/vault/core /path/to/vault/_AI/core
+ln -s ~/Dev/ai-layer/vault/core /path/to/vault/_AI/core
 ```
 
 Make the AI boot file (`CLAUDE.md` or `AGENTS.md`) in the vault root:
@@ -86,7 +86,7 @@ chmod +x /path/to/vault/.git/hooks/pre-commit
 Instead of relying on trigger phrase matching, install native slash commands that delegate to the workflows:
 
 ```bash
-bash ~/Dev/code-ai-layer/scripts/install-skills.sh
+bash ~/Dev/ai-layer/scripts/install-skills.sh
 ```
 
 This installs all skills from `shared/skills/`, `code/skills/`, and `vault/skills/` into `~/.claude/skills/`. You get:

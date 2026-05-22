@@ -25,17 +25,17 @@ echo "--------------------"
 
 # Core structure
 [ -d "_AI/core" ]    && r="ok" || r="fail"
-check "_AI/core/ exists" "$r" "Run: mkdir -p _AI && ln -s ~/Dev/code-ai-layer/core _AI/core (or copy the folder)"
+check "_AI/core/ exists" "$r" "Run: mkdir -p _AI && ln -s ~/Dev/ai-layer/core _AI/core (or copy the folder)"
 
 [ -f "_AI/core/AI.md" ] && r="ok" || r="fail"
-check "_AI/core/AI.md exists" "$r" "Check that _AI/core is correctly symlinked or copied from code-ai-layer"
+check "_AI/core/AI.md exists" "$r" "Check that _AI/core is correctly symlinked or copied from ai-layer"
 
 [ -d "_AI/PRPs" ] && r="ok" || r="fail"
 check "_AI/PRPs/ directory exists" "$r" "Run: mkdir -p _AI/PRPs"
 
 # OVERVIEW.md
 if [ ! -f "_AI/OVERVIEW.md" ]; then
-  check "_AI/OVERVIEW.md exists" "fail" "Create _AI/OVERVIEW.md (see code-ai-layer README for required sections)"
+  check "_AI/OVERVIEW.md exists" "fail" "Create _AI/OVERVIEW.md (see ai-layer README for required sections)"
   check "_AI/OVERVIEW.md has ## Architecture" "fail" "Add an ## Architecture section to _AI/OVERVIEW.md"
   check "_AI/OVERVIEW.md has ## Anti-patterns" "fail" "Add an ## Anti-patterns section to _AI/OVERVIEW.md"
 else
@@ -48,7 +48,7 @@ fi
 
 # VALIDATION.md
 if [ ! -f "_AI/VALIDATION.md" ]; then
-  check "_AI/VALIDATION.md exists" "fail" "Create _AI/VALIDATION.md (see code-ai-layer README for required sections)"
+  check "_AI/VALIDATION.md exists" "fail" "Create _AI/VALIDATION.md (see ai-layer README for required sections)"
   check "_AI/VALIDATION.md has ## Validation gates" "fail" "Add a ## Validation gates section to _AI/VALIDATION.md"
 else
   check "_AI/VALIDATION.md exists" "ok" ""
