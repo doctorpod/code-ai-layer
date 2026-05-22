@@ -56,7 +56,7 @@ Format:
 **south wall** — the boundary wall running east–west along the southern edge of the churchyard. Excludes the gate pier.
 ```
 
-**SPATIAL pass:** if `SPATIAL.md` exists in this KB, check whether any location claims made during the debrief need adding or correcting. If `SPATIAL.md` doesn't exist but the debrief produced location claims about a physical site, offer to create it. Format: see [[_AI/core/AI.md]].
+**SPATIAL pass:** if `SPATIAL.md` exists in this KB, check whether any location claims made during the debrief need adding or correcting. If `SPATIAL.md` doesn't exist but the debrief produced location claims about a physical site, offer to create it. Format: see [[_AI/local/AI.md]].
 
 ## Step 4: Create debrief note
 
@@ -81,7 +81,7 @@ Filename: `debrief-YYYY-MM-DD-[brief-description].md`
 3. Add wikilinks `[[page-name]]` to connect related pages
 4. If you see a person's name, wikilink it — do not create a note for them
 5. Update `INDEX.md` with new pages and one-line descriptions
-6. Append a log entry: `bash _AI/core/scripts/log-write.sh "DEBRIEF: <brief summary>"`
+6. Append a log entry: `bash _AI/local/scripts/log-write.sh "DEBRIEF: <brief summary>"`
 7. Move any inbox files to `curated/`
 
 ## Citation rules

@@ -20,7 +20,7 @@ Check whether `_AI/PRPs/[ticket-name]/GRILLING.md` exists.
 
 ## Step 1: Grill the user
 
-Follow the grill-me workflow (`_AI/core/workflows/grill-me.md`). Aim to understand:
+Follow the grill-me workflow (`_AI/shared/workflows/grill-me.md`). Aim to understand:
 - What is being built and why
 - Constraints and known gotchas
 - Which files are expected to change

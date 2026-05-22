@@ -8,7 +8,7 @@ When the user asks you to **lint** or **audit** a knowledge base:
 ## Step 1: Run the structural check
 
 ```
-python3 _AI/core/scripts/lint-kb.py <kb-path>
+python3 _AI/local/scripts/lint-kb.py <kb-path>
 ```
 
 Read the output. This catches format issues, orphan pages, broken cross-KB links, and pending `[!caution]` markers without reading all wiki files.
@@ -44,4 +44,4 @@ Report all findings as a numbered list with suggested fixes. Then work through t
 - For issues that need clarification, ask **one question**, wait for the answer, resolve it, then ask the next
 
 ## Step 4: Log
-Once all findings have been dealt with, append a log with a brief summary (max 12 words) by running `bash _AI/core/scripts/log-write.sh "LINT: <brief summary>"`
+Once all findings have been dealt with, append a log with a brief summary (max 12 words) by running `bash _AI/local/scripts/log-write.sh "LINT: <brief summary>"`

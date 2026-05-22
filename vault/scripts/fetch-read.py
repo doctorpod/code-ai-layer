@@ -6,7 +6,7 @@ The active log is the lexicographically greatest .md file in _AI/chats/.
 Prints everything after the last user heading (e.g. '### Andy') to stdout.
 
 Usage:
-    python3 _AI/core/scripts/fetch-read.py
+    python3 _AI/local/scripts/fetch-read.py
 """
 
 import os

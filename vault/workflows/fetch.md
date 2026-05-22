@@ -5,9 +5,9 @@ description: Retrieve your last chat message and respond with proper headings an
 
 # Fetch
 
-1. Run `python3 _AI/core/scripts/fetch-read.py` — prints the user's last message from the active chat file.
+1. Run `python3 _AI/local/scripts/fetch-read.py` — prints the user's last message from the active chat file.
 2. Act on the message.
-3. Write the response body to a temp file, then run `python3 _AI/core/scripts/fetch-write.py /tmp/response.md --heading "Claude Cowork (Sonnet 4.6)"` — injects the heading and timestamp, appends to the active chat file, or creates a new dated file if today is a new day.
+3. Write the response body to a temp file, then run `python3 _AI/local/scripts/fetch-write.py /tmp/response.md --heading "Claude Cowork (Sonnet 4.6)"` — injects the heading and timestamp, appends to the active chat file, or creates a new dated file if today is a new day.
 
 Response format (body only — heading and timestamp are injected by `--heading`):
 ```

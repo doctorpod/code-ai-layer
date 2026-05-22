@@ -33,7 +33,7 @@ In both cases: present one item, wait for the answer, resolve it, then move to t
 3. Add short wiki-links `[[page-name]]` to connect related pages
 4. If you see what looks like a person's name, just make it a wikilink, don't create a note for it in the wiki
 5. Update `INDEX.md` with new pages and one-line descriptions
-6. Append a log with a brief summary (max 12 words) by running `bash _AI/core/scripts/log-write.sh "INGEST: <brief summary>"`
+6. Append a log with a brief summary (max 12 words) by running `bash _AI/local/scripts/log-write.sh "INGEST: <brief summary>"`
 7. Move the file from `inbox/` to `curated/`
 
 A single source may touch 10-15 wiki pages. That is normal.
@@ -56,7 +56,7 @@ If searching:
 
 ## Writing style
 
-Follow the guidelines in [[_AI/core/STYLE.md]].
+Follow the guidelines in [[_AI/local/STYLE.md]].
 
 ## Page format
 
@@ -103,4 +103,4 @@ Once wiki pages are written and files moved to `curated/`, do a closing pass:
 
 **Glossary**: scan the wiki pages just written for any term, named feature, or concept that isn't yet in `GLOSSARY.md`. Propose additions one at a time — don't bulk-add. If `GLOSSARY.md` doesn't exist but candidates have emerged, offer to create it.
 
-**SPATIAL**: if `SPATIAL.md` exists in this KB and the source contained location claims, check whether any named features need adding or correcting. If `SPATIAL.md` doesn't exist but the source described a physical site with named features, offer to create it. Format: see [[_AI/core/AI.md]].
+**SPATIAL**: if `SPATIAL.md` exists in this KB and the source contained location claims, check whether any named features need adding or correcting. If `SPATIAL.md` doesn't exist but the source described a physical site with named features, offer to create it. Format: see [[_AI/local/AI.md]].

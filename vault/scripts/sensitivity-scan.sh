@@ -4,8 +4,8 @@
 # Patterns are loaded from sensitive-patterns.conf in the same directory.
 #
 # Usage:
-#   bash _AI/core/scripts/sensitivity-scan.sh            # run from vault root
-#   bash _AI/core/scripts/sensitivity-scan.sh /path/to/vault
+#   bash _AI/local/scripts/sensitivity-scan.sh            # run from vault root
+#   bash _AI/local/scripts/sensitivity-scan.sh /path/to/vault
 
 VAULT="${1:-.}"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"

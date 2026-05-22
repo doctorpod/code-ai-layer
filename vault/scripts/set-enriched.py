@@ -6,10 +6,10 @@ Sets enriched to today's date. If the note has no frontmatter, adds a minimal
 frontmatter block. If frontmatter exists, updates or inserts the enriched field.
 
 Usage:
-    python3 _AI/core/scripts/set-enriched.py <note-path>
+    python3 _AI/local/scripts/set-enriched.py <note-path>
 
 Example:
-    python3 _AI/core/scripts/set-enriched.py "gigs/2022-06-MoJ/lib/2024/My note.md"
+    python3 _AI/local/scripts/set-enriched.py "gigs/2022-06-MoJ/lib/2024/My note.md"
 """
 
 import os

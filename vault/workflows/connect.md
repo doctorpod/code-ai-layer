@@ -12,8 +12,8 @@ When asked to **connect** or run a **cross-wiki insights** pass:
 3. Load only the specific pages likely to yield *new* connections — aim for 6–10 pages, not the whole corpus
 4. Identify new connections: relationships, overlaps, tensions, or synergies between knowledge bases that aren't already recorded
 5. For each new connection, add a `## Wider connections` section (or append to an existing one) at the end of **both** pages — write one sentence per side explaining the connection from that page's perspective
-6. Run `python3 _AI/core/scripts/check-connections.py` to verify all new links are reciprocal
-7. Append a log with a brief summary (max 12 words) by running `bash _AI/core/scripts/log-write.sh "CONNECT: <brief summary>"`
+6. Run `python3 _AI/local/scripts/check-connections.py` to verify all new links are reciprocal
+7. Append a log with a brief summary (max 12 words) by running `bash _AI/local/scripts/log-write.sh "CONNECT: <brief summary>"`
 8. Report a brief summary of what was added
 
 ## Section format
@@ -30,7 +30,7 @@ Each bullet is one connection. Use the full vault-relative path in the wikilink 
 
 ## Writing style
 
-Follow the guidelines in [[_AI/core/STYLE.md]].
+Follow the guidelines in [[_AI/local/STYLE.md]].
 
 ## Notes
 

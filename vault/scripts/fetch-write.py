@@ -13,16 +13,16 @@ at the top of the response automatically. The response file then contains only
 the body. If --heading is omitted, the response must include the heading itself.
 
 Usage:
-    python3 _AI/core/scripts/fetch-write.py /path/to/response.md --heading "Claude Cowork (Sonnet 4.6)"
-    python3 _AI/core/scripts/fetch-write.py /path/to/response.md  # response includes heading
-    echo "body text" | python3 _AI/core/scripts/fetch-write.py --heading "Claude Cowork (Sonnet 4.6)"
+    python3 _AI/local/scripts/fetch-write.py /path/to/response.md --heading "Claude Cowork (Sonnet 4.6)"
+    python3 _AI/local/scripts/fetch-write.py /path/to/response.md  # response includes heading
+    echo "body text" | python3 _AI/local/scripts/fetch-write.py --heading "Claude Cowork (Sonnet 4.6)"
 
 Example workflow (heading injected by script):
     cat > /tmp/response.md << 'RESPONSE'
     Your response body here...
     RESPONSE
 
-    python3 _AI/core/scripts/fetch-write.py /tmp/response.md --heading "Claude Cowork (Sonnet 4.6)"
+    python3 _AI/local/scripts/fetch-write.py /tmp/response.md --heading "Claude Cowork (Sonnet 4.6)"
 """
 
 import os

@@ -10,7 +10,7 @@ Review the implementation against the PRP before raising a PR.
 ## Usage
 
 ```
-Follow the workflow in _AI/core/workflows/review.md using: _AI/PRPs/[ticket-name]/prp.md
+Follow the workflow in _AI/local/workflows/review.md using: _AI/PRPs/[ticket-name]/prp.md
 ```
 
 Run in a **fresh context** after execution is complete.

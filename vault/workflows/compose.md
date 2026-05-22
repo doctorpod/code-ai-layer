@@ -38,7 +38,7 @@ Write `brief.md` from the grilling. Show it to the user. The user dictates any c
 Once approved, append a log entry:
 
 ```bash
-bash _AI/core/scripts/log-write.sh "COMPOSE BRIEF APPROVED: [piece title] — [one line summary]"
+bash _AI/local/scripts/log-write.sh "COMPOSE BRIEF APPROVED: [piece title] — [one line summary]"
 ```
 
 ## Step 3: Build and approve the guide
@@ -74,7 +74,7 @@ This step applies most strongly to **design documents**. For blog posts, article
 When all sections are approved, confirm with the user that the piece is complete. Append a log entry:
 
 ```bash
-bash _AI/core/scripts/log-write.sh "COMPOSE: [piece title] — [brief summary]"
+bash _AI/local/scripts/log-write.sh "COMPOSE: [piece title] — [brief summary]"
 ```
 
 ## File structure

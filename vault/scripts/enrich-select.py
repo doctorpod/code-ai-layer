@@ -15,7 +15,7 @@ Two modes:
     Useful for surfacing patterns and insights from current + broader context.
 
 Usage:
-    python3 _AI/core/scripts/enrich-select.py [--mode enrich|dive] [--count N] [--days N]
+    python3 _AI/local/scripts/enrich-select.py [--mode enrich|dive] [--count N] [--days N]
 
 Options:
     --mode          enrich or dive (default: enrich)
