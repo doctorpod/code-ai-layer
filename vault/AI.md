@@ -1,10 +1,10 @@
 # AI Context
 
-- This is the `_AI/core/` folder. I shall refer to the parent folder (the folder you've been given access to) as **the vault**.
+- This is the `_AI/local/` folder. I shall refer to the parent folder (the folder you've been given access to) as **the vault**.
 - Chats live in `_AI/chats/`
 - Logs live in `_AI/logs/`
-- Scripts live in `_AI/core/scripts/`
-- Workflows live in `_AI/core/workflows/`
+- Scripts live in `_AI/local/scripts/`
+- Workflows live in `_AI/local/workflows/` (vault-specific) and `_AI/shared/workflows/` (shared)
 
 ## Setup files
 
@@ -64,21 +64,21 @@ All directions are relative to the church building.
 
 ## Workflows
 
-Workflows live in `_AI/core/workflows/`. When my request matches a trigger below, read and follow the corresponding workflow file.
+When my request matches a trigger below, read and follow the corresponding workflow file.
 
 | Trigger | Workflow |
 |---|---|
-| "validate AI setup", "check AI setup" | `_AI/core/workflows/validate-ai-setup.md` |
-| "ingest" + knowledge base name | `_AI/core/workflows/ingest.md` |
-| "lint" or "audit" + knowledge base name | `_AI/core/workflows/lint.md` |
-| "connect" or "find cross-knowledge base insights" | `_AI/core/workflows/connect.md` |
-| "write", "guide", or "help with output" | `_AI/core/workflows/write.md` |
-| "compose" | `_AI/core/workflows/compose.md` |
-| "grill me" or "interview me" | `_AI/core/workflows/grill-me.md` |
-| "debrief" | `_AI/core/workflows/debrief.md` *(optional workflow)* |
-| "save" | `_AI/core/workflows/save.md` |
-| "fetch" | `_AI/core/workflows/fetch.md` *(optional workflow)* |
+| "validate AI setup", "check AI setup" | `_AI/shared/workflows/validate-ai-setup.md` |
+| "ingest" + knowledge base name | `_AI/local/workflows/ingest.md` |
+| "lint" or "audit" + knowledge base name | `_AI/local/workflows/lint.md` |
+| "connect" or "find cross-knowledge base insights" | `_AI/local/workflows/connect.md` |
+| "write", "guide", or "help with output" | `_AI/local/workflows/write.md` |
+| "compose" | `_AI/local/workflows/compose.md` |
+| "grill me" or "interview me" | `_AI/shared/workflows/grill-me.md` |
+| "debrief" | `_AI/local/workflows/debrief.md` *(optional workflow)* |
+| "save" | `_AI/local/workflows/save.md` |
+| "fetch" | `_AI/local/workflows/fetch.md` *(optional workflow)* |
 
 ## The fetch method *(optional)*
 
-Sometimes, rather than typing into the chat, I'll use the _fetch_ method to send and receive messages. When I say "fetch", run the workflow at `_AI/core/workflows/fetch.md`.
+Sometimes, rather than typing into the chat, I'll use the _fetch_ method to send and receive messages. When I say "fetch", run the workflow at `_AI/local/workflows/fetch.md`.

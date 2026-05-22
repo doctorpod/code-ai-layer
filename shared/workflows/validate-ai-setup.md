@@ -1,6 +1,6 @@
 # Workflow: Validate AI Setup
 
-Check that the AI layer is correctly installed in this vault.
+Check that the AI layer is correctly installed in this project.
 
 ## Usage
 
@@ -8,10 +8,10 @@ Check that the AI layer is correctly installed in this vault.
 
 ## Steps
 
-1. Run from the root of the vault:
+1. Run from the project root:
 
 ```bash
-bash _AI/core/scripts/validate-ai-setup.sh
+bash _AI/local/scripts/validate-ai-setup.sh
 ```
 
 2. Present the output to the user as-is.
