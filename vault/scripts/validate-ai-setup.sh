@@ -39,11 +39,14 @@ echo "AI layer setup check"
 echo "--------------------"
 
 # Core structure
-[ -d "_AI/core" ] && r="ok" || r="fail"
-check "_AI/core/ exists" "$r" "Run: mkdir -p _AI && ln -s ~/Dev/vault-ai-layer/core _AI/core"
+[ -d "_AI/local" ] && r="ok" || r="fail"
+check "_AI/local/ exists" "$r" "Run: bash ~/Dev/ai-layer/scripts/install-target.sh --vault"
 
-[ -f "_AI/core/AI.md" ] && r="ok" || r="fail"
-check "_AI/core/AI.md exists" "$r" "Check that _AI/core is correctly symlinked or copied from vault-ai-layer"
+[ -f "_AI/local/AI.md" ] && r="ok" || r="fail"
+check "_AI/local/AI.md exists" "$r" "Check that _AI/local is correctly symlinked (run install-target.sh --vault)"
+
+[ -d "_AI/shared" ] && r="ok" || r="fail"
+check "_AI/shared/ exists" "$r" "Run: bash ~/Dev/ai-layer/scripts/install-target.sh --vault"
 
 # Required directories
 [ -d "_AI/chats" ] && r="ok" || r="fail"
@@ -66,17 +69,17 @@ boot_wired=""
 for f in CLAUDE.md AGENTS.md .cursorrules; do
   if [ -f "$f" ]; then
     boot_found="$f"
-    grep -q "_AI/core/AI.md" "$f" && boot_wired="ok"
+    grep -q "_AI/local/AI.md" "$f" && boot_wired="ok"
     break
   fi
 done
 
 [ -n "$boot_found" ] && r="ok" || r="fail"
-check "AI boot file exists (CLAUDE.md / AGENTS.md / .cursorrules)" "$r" "Create a boot file (e.g. CLAUDE.md) containing: Everything you need starts in \`_AI/core/AI.md\`."
+check "AI boot file exists (CLAUDE.md / AGENTS.md / .cursorrules)" "$r" "Create a boot file (e.g. CLAUDE.md) containing: See \`_AI/local/AI.md\` for vault context and available workflows."
 
 if [ -n "$boot_found" ]; then
   [ -n "$boot_wired" ] && r="ok" || r="fail"
-  check "$boot_found references _AI/core/AI.md" "$r" "Add the line: Everything you need starts in \`_AI/core/AI.md\`."
+  check "$boot_found references _AI/local/AI.md" "$r" "Add the line: See \`_AI/local/AI.md\` for vault context and available workflows."
 fi
 
 # Pre-commit sensitivity hook
@@ -86,7 +89,7 @@ if [ -f "$hook" ] && [ -x "$hook" ]; then
 else
   r="fail"
 fi
-check "Pre-commit sensitivity hook installed" "$r" "Run: cp _AI/core/scripts/pre-commit-sensitivity-check.sh .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit"
+check "Pre-commit sensitivity hook installed" "$r" "Run: cp _AI/local/scripts/pre-commit-sensitivity-check.sh .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit"
 
 # Verdict
 echo ""

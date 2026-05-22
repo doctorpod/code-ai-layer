@@ -24,11 +24,14 @@ echo "AI layer setup check"
 echo "--------------------"
 
 # Core structure
-[ -d "_AI/core" ]    && r="ok" || r="fail"
-check "_AI/core/ exists" "$r" "Run: mkdir -p _AI && ln -s ~/Dev/ai-layer/core _AI/core (or copy the folder)"
+[ -d "_AI/local" ] && r="ok" || r="fail"
+check "_AI/local/ exists" "$r" "Run: bash ~/Dev/ai-layer/scripts/install-target.sh --code"
 
-[ -f "_AI/core/AI.md" ] && r="ok" || r="fail"
-check "_AI/core/AI.md exists" "$r" "Check that _AI/core is correctly symlinked or copied from ai-layer"
+[ -f "_AI/local/AI.md" ] && r="ok" || r="fail"
+check "_AI/local/AI.md exists" "$r" "Check that _AI/local is correctly symlinked (run install-target.sh --code)"
+
+[ -d "_AI/shared" ] && r="ok" || r="fail"
+check "_AI/shared/ exists" "$r" "Run: bash ~/Dev/ai-layer/scripts/install-target.sh --code"
 
 [ -d "_AI/PRPs" ] && r="ok" || r="fail"
 check "_AI/PRPs/ directory exists" "$r" "Run: mkdir -p _AI/PRPs"
@@ -62,17 +65,17 @@ boot_wired=""
 for f in CLAUDE.md AGENTS.md .cursorrules; do
   if [ -f "$f" ]; then
     boot_found="$f"
-    grep -q "_AI/core/AI.md" "$f" && boot_wired="ok"
+    grep -q "_AI/local/AI.md" "$f" && boot_wired="ok"
     break
   fi
 done
 
 [ -n "$boot_found" ] && r="ok" || r="fail"
-check "AI boot file exists (CLAUDE.md / AGENTS.md / .cursorrules)" "$r" "Create a boot file (e.g. CLAUDE.md) containing: See \`_AI/core/AI.md\` for project context and available workflows."
+check "AI boot file exists (CLAUDE.md / AGENTS.md / .cursorrules)" "$r" "Create a boot file (e.g. CLAUDE.md) containing: See \`_AI/local/AI.md\` for project context and available workflows."
 
 if [ -n "$boot_found" ]; then
   [ -n "$boot_wired" ] && r="ok" || r="fail"
-  check "$boot_found references _AI/core/AI.md" "$r" "Add the line: See \`_AI/core/AI.md\` for project context and available workflows."
+  check "$boot_found references _AI/local/AI.md" "$r" "Add the line: See \`_AI/local/AI.md\` for project context and available workflows."
 fi
 
 # Verdict
