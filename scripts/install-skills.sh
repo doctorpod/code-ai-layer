@@ -58,19 +58,19 @@ installed_names=""
 for src in "$REPO_ROOT/code/workflows"/*.md; do
   [[ -e "$src" ]] || continue
   name=$(basename "$src" .md)
-  write_skill "$name" "$src" "Read and follow \`_AI/local/workflows/$name.md\`."
+  write_skill "$name" "$src" "Read and follow \`$REPO_ROOT/code/workflows/$name.md\`."
 done
 
 for src in "$REPO_ROOT/vault/workflows"/*.md; do
   [[ -e "$src" ]] || continue
   name=$(basename "$src" .md)
-  write_skill "$name" "$src" "Read and follow \`_AI/local/workflows/$name.md\`."
+  write_skill "$name" "$src" "Read and follow \`$REPO_ROOT/vault/workflows/$name.md\`."
 done
 
 for src in "$REPO_ROOT/shared/workflows"/*.md; do
   [[ -e "$src" ]] || continue
   name=$(basename "$src" .md)
-  write_skill "$name" "$src" "Read and follow \`_AI/shared/workflows/$name.md\`."
+  write_skill "$name" "$src" "Read and follow \`$REPO_ROOT/shared/workflows/$name.md\`."
 done
 
 # Remove stale skills: SKILL.md references our paths but name not in current install set
