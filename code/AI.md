@@ -10,9 +10,9 @@ Workflows live in `_AI/local/workflows/` (code-specific) and `_AI/shared/workflo
 
 | Trigger | Workflow |
 |---|---|
-| "create a PRP", "plan [ticket]", "write a PRP" | `_AI/local/workflows/create-prp.md` |
+| "create a PRP", "plan [ticket]", "write a PRP" | `_AI/local/workflows/create-prp.md` — synthesizes `prp.md` from captured decisions; no interview |
 | "execute PRP", "implement PRP", "run PRP" | `_AI/local/workflows/execute-prp.md` ⚠️ fresh context required |
 | "review", "post-execution review", "check the implementation" | `_AI/local/workflows/review.md` ⚠️ fresh context required |
-| "grill me", "interview me", "question me about" | `_AI/shared/workflows/grill-me.md` |
+| "grill me", "interview me", "question me about" | `_AI/shared/workflows/grill-me.md` — captures decisions into a durable ADR-style record |
 | "teach me", "teach me on how this works", "help me learn" | `_AI/local/workflows/teach-me.md` |
 | "validate AI setup", "check AI setup", "is the AI layer installed correctly" | `_AI/shared/workflows/validate-ai-setup.md` |

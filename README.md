@@ -9,8 +9,8 @@ Inspired by [Matt Pocock](https://www.mattpocock.com) - Thanks Matt!.
 ### Code workflows
 
 Drop the `code/` layer into any coding repo and get:
-- **Grill me** — relentless interrogation to surface assumptions before writing a line of code
-- **Create PRP** — a complete implementation brief built from that shared understanding
+- **Grill me** — relentless interrogation that captures decisions into a durable ADR-style record
+- **Create PRP** — synthesizes a complete implementation brief from those captured decisions
 - **Execute PRP** — a disciplined implementation pass in a clean context
 - **Review** — a post-implementation check against the brief before raising a PR
 - **Teach me** — guided learning from the codebase

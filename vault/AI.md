@@ -74,7 +74,7 @@ When my request matches a trigger below, read and follow the corresponding workf
 | "connect" or "find cross-knowledge base insights" | `_AI/local/workflows/connect.md` |
 | "write", "guide", or "help with output" | `_AI/local/workflows/write.md` |
 | "compose" | `_AI/local/workflows/compose.md` |
-| "grill me" or "interview me" | `_AI/shared/workflows/grill-me.md` |
+| "grill me" or "interview me" | `_AI/shared/workflows/grill-me.md` — captures decisions into a durable ADR-style record |
 | "debrief" | `_AI/local/workflows/debrief.md` *(optional workflow)* |
 | "save" | `_AI/local/workflows/save.md` |
 | "fetch" | `_AI/local/workflows/fetch.md` *(optional workflow)* |
