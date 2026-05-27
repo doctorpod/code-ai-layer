@@ -14,6 +14,18 @@ Before anything else, identify the source type from the content (speaker labels,
 
 If genuinely unclear, ask the user.
 
+## Step 0b: Advertisement check (external sources only)
+
+Before discussing takeaways, scan for signs the source is promotional content:
+
+- Stats or claims sourced exclusively from the vendor/author being promoted
+- A product, service, course, or event linked or plugged mid-article
+- Urgency framing ("limited window", "act now") tied to a commercial offer
+- No independent third-party sources cited
+- Publisher is the vendor, or the article reads as sponsored/native advertising
+
+If two or more signals are present: **stop and flag it to the user** before going any further. Name the signals you found and ask whether to continue or bin the source. Do not proceed to Step 1 until the user confirms.
+
 ## Step 1: Discuss key takeaways (all sources)
 
 Discuss key takeaways with the user before writing anything.
