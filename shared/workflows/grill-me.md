@@ -2,7 +2,6 @@
 name: grill-me
 description: Capture design decisions into a durable ADR-style record while interviewing you about your plan.
 ---
-
 # Workflow: Grill Me
 
 Relentlessly interview me about every aspect of this plan, one question at a time, to reach shared understanding and capture durable decisions.
