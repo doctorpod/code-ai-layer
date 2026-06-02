@@ -24,7 +24,7 @@ If `_AI/GOALS.md` is missing, alert the user.
 	- Any folder named `wiki/`
 	- Any folder named `assets/`
 	- Any file named `INDEX.md`
-	- Any file named `GLOSSARY.md`
+	- Any note with `categories: ["[[Glossary]]"]` in its frontmatter (concept notes)
 	- Any file named `QUESTIONS.md`
 	- Any file named `SPATIAL.md`
 	- You may move files to any folder named `curated/`
@@ -42,7 +42,7 @@ If `_AI/GOALS.md` is missing, alert the user.
 	- `assets/` — Images downloaded during ingest; gitignored
 	- `INDEX.md` — You keep this updated
 	- `AI.md` — Optional: specific instructions for this knowledge base
-	- `GLOSSARY.md` — Optional: key terms and definitions
+	- concept notes — any note with `categories: ["[[Glossary]]"]` frontmatter; queryable via Dataview
 	- `QUESTIONS.md` — Optional: outstanding questions requiring follow-up
 	- `SPATIAL.md` — Optional: named-feature location index *(only for KBs with a physical site)*
 

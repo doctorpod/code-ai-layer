@@ -113,6 +113,25 @@ Link to related concepts using [[wiki-links]] throughout the text.
 
 Once wiki pages are written and files moved to `curated/`, do a closing pass:
 
-**Glossary**: scan the wiki pages just written for any term, named feature, or concept that isn't yet in `GLOSSARY.md`. Propose additions one at a time — don't bulk-add. If `GLOSSARY.md` doesn't exist but candidates have emerged, offer to create it.
+**Concept notes**: scan the wiki pages just written for any term, named feature, or concept that could stand as a glossary entry. For each candidate:
+- Search the vault by filename for an existing note matching the canonical term name
+- If a match exists and already has `categories: ["[[Glossary]]"]` in its frontmatter: skip
+- If a match exists without the category: propose adding `categories: ["[[Glossary]]"]` to its frontmatter
+- If no match: propose creating a new concept note (confirm with user before creating; one at a time)
+
+Note: any wiki page created during ingest can itself become a glossary entry — just add the category to its frontmatter.
+
+Concept note template:
+```markdown
+---
+categories: ["[[Glossary]]"]
+aliases: ["prompt engineering"]
+---
+*One-sentence definition.*
+
+Further context or detail here (optional).
+```
+
+The note's filename is the canonical term name (e.g. `prompt-engineering.md`). The `aliases` value is the humanised form of the filename: hyphens replaced with spaces, lowercase — unless the term is an acronym, in which case uppercase (e.g. `rag` → `"RAG"`). The italic first line is the definition; everything after the blank line is free-form.
 
 **SPATIAL**: if `SPATIAL.md` exists in this KB and the source contained location claims, check whether any named features need adding or correcting. If `SPATIAL.md` doesn't exist but the source described a physical site with named features, offer to create it. Format: see [[_AI/local/AI.md]].

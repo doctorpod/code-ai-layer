@@ -33,7 +33,6 @@ For checks the script cannot do, read only the specific files needed:
 - **Contradictions**: read pages most likely to overlap on a shared topic
 - **Person names not wikilinked**: read pages most likely to mention people by name in prose
 - **Outdated claims**: focus on pages with dates or time-sensitive content
-- **Glossary coverage**: if `GLOSSARY.md` exists, scan wiki pages for bolded terms, named features, and proper nouns for places or objects — flag any that appear in the wiki but are absent from the glossary
 - **SPATIAL consistency**: if `SPATIAL.md` exists, spot-check that location descriptions in wiki pages don't contradict SPATIAL entries (e.g. a wiki page says "northeast corner" but SPATIAL says "southwest")
 
 ## Step 3: Report and resolve sequentially

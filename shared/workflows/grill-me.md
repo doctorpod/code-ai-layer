@@ -47,7 +47,23 @@ Continue appending each subsequent qualifying decision in the same format.
 
 When a term emerges that needs a precise, shared definition:
 
-1. Search the project or vault for existing `GLOSSARY.md` files.
+**If in an Obsidian vault**: skip the file-selection step entirely. Ask: *"This looks like a glossary-worthy term — shall I create a concept note for it?"* If yes, create the note using the concept note template in the topic folder (`_AI/chats/<slug>/`):
+
+```markdown
+---
+categories: ["[[Glossary]]"]
+aliases: ["prompt engineering"]
+---
+*One-sentence definition.*
+
+Further context or detail here (optional).
+```
+
+The note's filename is the canonical term name (e.g. `prompt-engineering.md`). The `aliases` value is the humanised form of the filename: hyphens replaced with spaces, lowercase — unless the term is an acronym, in which case uppercase (e.g. `rag` → `"RAG"`).
+
+**If in a code project**:
+
+1. Search the project for existing `GLOSSARY.md` files.
 2. Ask the user which to use:
    - An existing `GLOSSARY.md` (show the paths found)
    - A new one created in the topic folder

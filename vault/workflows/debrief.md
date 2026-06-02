@@ -26,8 +26,6 @@ Rules:
 - If a claim cannot be resolved in this conversation (needs checking with a person or on site), do not guess — log it as an outstanding question (see Step 2).
 - Do not stop early. If something feels vague, push on it.
 
-**Glossary checks**: if the user uses a term already in `GLOSSARY.md` and it's unclear whether they mean the same thing, challenge them inline: *"You said [term] — do you mean [glossary definition]?"* Resolve before continuing.
-
 ## Step 2: Maintain QUESTIONS.md
 
 If any questions cannot be resolved during the debrief, add them to `QUESTIONS.md` at the project root. Create the file if it doesn't exist.
@@ -43,18 +41,26 @@ Rules:
 - Always include: checkbox, Q-number, date raised, who/what to check with, and the question.
 - When an inbox note later answers a question (by Q-number or obvious content), process the answer into the wiki and delete the resolved question from `QUESTIONS.md`.
 
-## Step 3: Maintain GLOSSARY.md and SPATIAL.md
+## Step 3: Concept notes and SPATIAL.md
 
-**Inline (during grilling):** if a term already in `GLOSSARY.md` is used ambiguously, challenge it: *"You said [term] — do you mean [glossary definition]?"* Resolve before continuing.
+**Closing pass (after wiki writing is complete):** scan everything written for any term, named feature, or concept that could stand as a glossary entry. Do this as a named step — don't skip it. For each candidate:
+- Search the vault by filename for an existing note matching the canonical term name
+- If a match exists and already has `categories: ["[[Glossary]]"]` in its frontmatter: skip
+- If a match exists without the category: propose adding `categories: ["[[Glossary]]"]` to its frontmatter
+- If no match: propose creating a new concept note (confirm with user before creating; one at a time)
 
-**Closing pass (after wiki writing is complete):** scan everything written and propose adding any term, named feature, or concept not yet in `GLOSSARY.md`. Do this as a named step — don't skip it. Propose additions one at a time. Only add with the user's confirmation.
-
-Create `GLOSSARY.md` at the project root if it doesn't exist. Keep entries as a flat alphabetical list — no letter headings.
-
-Format:
+Concept note template:
 ```markdown
-**south wall** — the boundary wall running east–west along the southern edge of the churchyard. Excludes the gate pier.
+---
+categories: ["[[Glossary]]"]
+aliases: ["prompt engineering"]
+---
+*One-sentence definition.*
+
+Further context or detail here (optional).
 ```
+
+The note's filename is the canonical term name (e.g. `prompt-engineering.md`). The `aliases` value is the humanised form of the filename: hyphens replaced with spaces, lowercase — unless the term is an acronym, in which case uppercase (e.g. `rag` → `"RAG"`). The italic first line is the definition; everything after the blank line is free-form.
 
 **SPATIAL pass:** if `SPATIAL.md` exists in this KB, check whether any location claims made during the debrief need adding or correcting. If `SPATIAL.md` doesn't exist but the debrief produced location claims about a physical site, offer to create it. Format: see [[_AI/local/AI.md]].
 
